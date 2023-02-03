@@ -1,0 +1,6 @@
+.message_wrapper {
+  flex: 1;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  margin: 1.5rem auto;
+}
