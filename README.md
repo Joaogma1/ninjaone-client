@@ -1,46 +1,129 @@
-# Getting Started with Create React App
+# ninjaone-client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an code assestment test for Front-end Developers
 
-## Available Scripts
+## Running locally
 
-In the project directory, you can run:
+Download the [Backend](https://github.com/NinjaRMM/devicesTask_serverApp) 
+ and follow it running instructions
 
-### `npm start`
+Clone the project
+
+```bash
+  git clone https://github.com/Joaogma1/ninjaone-client
+```
+
+Navigate to project Directory
+
+```bash
+  cd ninjaone-client
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Run the App
+
+```bash
+  npm run start
+```
+
+### `Open the Browser`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `Running tests`
 
-### `npm test`
+```bash
+  npm test
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
-### `npm run build`
+### `Running tests`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  npm run coverage
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Launches the test runner that give informations about tests and the converage it has as output a folder named coverage that contains Covarage Data about the App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Folder Structure
 
-### `npm run eject`
+    .
+    src/
+    |-- assets/
+    |   |-- icons/
+    |   |-- images/
+    |-- clients/
+    |-- components/
+    |-- hooks/
+    |-- libs/
+    |-- pages/
+    |-- redux/
+    |-- tests/
+    |-- types/
+        |-- enums/
+        |-- interfaces/
+        |-- models/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> Understanding the structure
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### The source code is organized into the following directories:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    src
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    The main directory for the source code.
 
-## Learn More
+    assets
+    Contains icons and images used throughout the application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    clients
+    Contains all the API clients for making requests to the backend.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    components
+    Contains all the reusable UI components used throughout the application.
+
+    hooks
+    Contains custom hooks that can be reused across different components.
+
+    libs
+    Contains utility functions and helper libraries used throughout the application.
+
+    pages
+    Contains all the pages that make up the application.
+
+    redux
+    Contains all redux folders including actions, reducers and store
+
+    tests
+    Contains tests for different parts of the application.
+
+    types
+    Contains enums, interfaces, and models used to type the data in the application.
+
+### Styles
+
+    The entire application was developed using pure css, there is no UI Lib beeing used.
+
+## Libraries
+
+> [axios](https://axios-http.com/docs/intro) > [yup](https://github.com/jquense/yup) >[formik](https://formik.org/docs/overview) > [react-select](https://react-select.com/home) > [redux](https://react-redux.js.org/)
+
+## Stack
+
+**Front-end:** React, Redux
+
+## Author
+
+-  [@João G Mauricio](https://www.linkedin.com/in/joaog-mauricio/)
+
+## 🔗 My Links
+
+[![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://katherineoelsner.com/)
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joaog-mauricio/)
