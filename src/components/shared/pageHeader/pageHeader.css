@@ -1,0 +1,19 @@
+.page-header {
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row;
+   align-items: center;
+   height: 2.5rem;
+   flex-wrap: nowrap;
+}
+
+.pageheader_wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 1.5rem;
+}
+
+.pageheader_container {
+   display: flex;
+}
