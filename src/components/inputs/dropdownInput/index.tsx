@@ -2,11 +2,11 @@ import React from "react";
 import Select, { components, Props, OptionProps, ValueContainerProps, DropdownIndicatorProps } from "react-select";
 import { Icon } from "components";
 
-export interface FormDropdownProps {
+export interface FormDropdownProps extends Props{
    fixedlabel?: string;
 }
 
-const DropdownInput: React.FC<Props & FormDropdownProps> = ({ fixedlabel, ...rest }) => {
+const DropdownInput: React.FC<FormDropdownProps> = ({ fixedlabel, ...rest }) => {
    return (
       <div>
          <Select
@@ -37,6 +37,7 @@ const DropdownInput: React.FC<Props & FormDropdownProps> = ({ fixedlabel, ...res
                   ...base,
                   backgroundColor: "transparent",
                }),
+
             }}
          />
       </div>

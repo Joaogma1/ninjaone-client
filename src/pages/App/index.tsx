@@ -18,10 +18,11 @@ import {
    withGlobalHeader,
 } from "components";
 import { useDeviceClient } from "hooks";
-import { MultiValue, SingleValue } from "react-select";
+import { MultiValue } from "react-select";
 import { Device } from "types/models/deviceType";
 import { useFormik } from "formik";
 import { capitalizeFirstLetter, formValidator } from "libs";
+import {Option} from "../../types/interfaces/devicesClient";
 
 interface FormType {
    id: string;
@@ -252,6 +253,7 @@ const App: React.FC = () => {
                   hasError={formik.touched.type?.value && formik.errors.type?.value !== undefined}
                   labelName="Device type"
                   options={deviceTypeList}
+                  getOptionLabel={(value:any) => value && `${(value as Option).label} Workstation`}
                />
                <FormInput
                   isMandatory

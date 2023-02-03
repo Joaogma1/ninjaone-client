@@ -1,7 +1,7 @@
 import React from "react";
 import withFormField, { FormFieldProps } from "../formField";
 
-const FormInput: React.FC<React.InputHTMLAttributes<HTMLInputElement> & FormFieldProps> = ({
+const FormInput: React.FC<React.InputHTMLAttributes<HTMLInputElement> & FormFieldProps > = ({
    errorMessage,
    hasError = false,
    isMandatory = false,
