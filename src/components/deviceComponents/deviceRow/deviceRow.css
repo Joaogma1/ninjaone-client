@@ -1,0 +1,38 @@
+.deviceinfo_wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   width: 11rem;
+   height: 2.25rem;
+   gap: 0.25rem;
+   flex: 1;
+   margin: 0.25rem 0;
+}
+
+.deviceinfo_top_section {
+   gap: 0.25rem;
+   height: 1rem;
+   width: auto;
+}
+
+.deviceinfo_bottom_section {
+   height: 1rem;
+   width: auto;
+}
+
+.device_spec {
+   margin: auto;
+   min-width: 15rem;
+   line-height: 0.7rem;
+}
+
+.action_container {
+   visibility: hidden;
+   flex: 1;
+}
+.table_row_wrapper:hover {
+   background-color: #f4f4f5;
+}
+.table_row_wrapper:hover .action_container {
+   visibility: visible;
+}

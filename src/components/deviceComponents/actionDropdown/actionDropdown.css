@@ -1,0 +1,17 @@
+.action-dropdown {
+  position: absolute;
+  width: 7.5rem;
+  height: 4.5rem;
+  transform: translateX(-6rem) translateY(-0.2rem);
+}
+#action_box {
+  box-sizing: border-box;
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+  list-style-type: none;
+  height: 100%;
+  margin: 0.25rem;
+  width: 7.5rem;
+  transform: translateX(-2rem) translateY(-0.2rem);
+}
