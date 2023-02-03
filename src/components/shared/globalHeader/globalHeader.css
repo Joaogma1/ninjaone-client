@@ -1,0 +1,10 @@
+#global-header {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+#global-header > img {
+  display: flex;
+  flex-wrap: wrap;
+}

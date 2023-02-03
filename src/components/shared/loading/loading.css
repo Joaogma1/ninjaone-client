@@ -1,0 +1,43 @@
+.loading-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.loading-spinner {
+  border: 0.25rem solid #f3f3f3; /* Light grey */
+  border-top: 0.25rem solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-message {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: #333;
+}
