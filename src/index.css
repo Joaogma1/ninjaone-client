@@ -1,13 +1,285 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+#root {
+   height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+   --white100: #ffffff;
+   --black100: #211f33;
+   --black75: #595766;
+   --black65: #6e6d7a;
+   --danger: #d53948;
+   --secondary65: #88859e;
+   --blue: #337ab7;
+   height: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+   :root {
+      scroll-behavior: smooth;
+   }
+}
+
+html,
+body {
+   height: 100%;
+}
+
+html {
+   font-size: 0.875rem;
+   line-height: 1.15;
+   -ms-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+   min-width: 20rem;
+   background: var(--white100);
+   font-family: "Inter", sans-serif;
+   font-size: 0.875rem;
+   line-height: 1.4285em;
+   color: var(--black100);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+   font-family: "Inter", sans-serif, Arial, Helvetica;
+   line-height: 1.28571429em;
+   margin: calc(2rem - 0.14285714em) 0 1rem;
+   font-weight: 700;
+   padding: 0;
+}
+
+h1 {
+   min-height: 1rem;
+   font-size: 1.25rem;
+}
+h2 {
+   font-size: 1rem;
+}
+h3 {
+   font-size: 0.75rem;
+}
+
+img,
+svg {
+   vertical-align: middle;
+}
+
+table {
+   caption-side: bottom;
+   border-collapse: collapse;
+}
+
+button {
+   border-radius: 0.25rem;
+   cursor: pointer;
+   border: none;
+   gap: 0.5rem;
+
+}
+.page_wrapper {
+   display: flex;
+   flex-direction: column;
+   margin: 1.5rem;
+   overflow: hidden;
+   height: 100%;
+}
+
+.invisible:focus,
+.invisible:hover {
+   background-color: #e8e8ea;
+}
+
+.h1 {
+   font-size: 1.5rem;
+}
+.h2 {
+   font-size: 1.25rem;
+}
+.h3 {
+   font-size: 1rem;
+}
+.h4 {
+   font-size: 0.875rem;
+}
+.h5 {
+   font-size: 0.75rem;
+}
+.f_normal {
+   font-weight: 400;
+}
+.f_medium {
+   font-weight: 500;
+}
+
+.black100 {
+   color: var(--black100);
+}
+.black75 {
+   color: var(--black75);
+}
+.black65 {
+   color: var(--black65);
+}
+.bg_blue {
+   background-color: var(--blue);
+}
+
+.pageheadertitle {
+   font-weight: 500;
+   font-size: 1.25rem;
+   color: #1f1f1f;
+}
+
+.blue {
+   color: #337ab7;
+}
+.danger {
+   color: var(--danger);
+}
+.bg_danger {
+   background-color: var(--danger);
+}
+
+.white100 {
+   color: var(--white100);
+}
+
+.bg_darkblue {
+   background-color: #002a42;
+}
+
+.bg_white {
+   background-color: var(--white100);
+}
+
+.bg_transparent {
+   background-color: transparent;
+}
+
+.bg_softgrey {
+   background-color: #cbcfd3;
+}
+.bg_black10 {
+   background: #e8e8ea;
+}
+.bg_black5 {
+   background-color: #f4f4f5;
+}
+
+.b_none {
+   border: none;
+}
+
+.b_gray {
+   border: 1px solid #d1d0d9;
+   border-radius: 0.25rem;
+}
+
+.b_darkopaque {
+   border: 1px solid rgba(72, 68, 105, 0.25);
+}
+.b_bottom_grey {
+   border-bottom: 1px solid #e7e8eb;
+}
+.b_danger {
+   border-color: var(--danger) !important;
+}
+.drop_shadow {
+   filter: drop-shadow(0px 0.125rem 0.25rem rgba(33, 31, 51, 0.15));
+}
+.container {
+   width: 100%;
+}
+.row {
+   display: flex;
+   flex-direction: row !important;
+   gap: 0.5rem;
+}
+.col {
+   display: flex;
+   flex-direction: column;
+}
+.center {
+   align-items: center;
+}
+.separated {
+   justify-content: space-between;
+}
+
+.end {
+   justify-content: flex-end;
+}
+.start {
+   justify-content: flex-start;
+}
+.rounded {
+   border-radius: 0.25rem;
+}
+.semi_rounded {
+   border-radius: 0.125rem;
+}
+.space_tiny {
+   padding: 0.75rem;
+}
+.spacing_small {
+   padding: 1.5rem;
+}
+
+.form_wrapper {
+   margin-top: 1.5rem;
+   margin-bottom: 2rem;
+}
+
+.form-input-container {
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   margin: 0.75rem 0;
+}
+
+.form_input_label {
+   margin-bottom: 0.25rem;
+}
+.form_input:focus {
+   outline: none;
+}
+
+.form_input {
+   padding: 0.53125rem 0.75rem;
+}
+
+.form_input_errormessage {
+   margin-top: 0.25rem;
+}
+.btn_icon_default {
+   width: 2rem;
+   height: 2rem;
+}
+
+.dropdown_input_ostype {
+   min-width: 9.6875rem;
+   height: 100%;
+}
+.dropdown_input_sorttype {
+   min-width: 18.1875rem;
+   height: 100%;
+}
+.input_search {
+   min-width: 16.875rem;
+   height: 100%;
+   min-height: 2.375rem;
 }
