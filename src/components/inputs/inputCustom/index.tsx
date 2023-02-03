@@ -9,7 +9,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 const InputWithIcon: React.FC<InputProps> = ({ icon, onChange, value, width = "auto", height = "auto", placeholder, ...rest }) => {
    return (
-      <div className={`${rest.className} row center bg_white b_darkopaque rounded h3}`} style={{ paddingLeft: 12 }}>
+      <div className={`${rest.className} row center bg_white b_darkopaque rounded h3}`} style={{ paddingLeft: 12 }} data-testid={`icon-container`}>
          {icon && <IconContainer name={icon} />}
          <input {...rest} className={`input-custom`} onChange={onChange} value={value} placeholder={placeholder} />
       </div>
