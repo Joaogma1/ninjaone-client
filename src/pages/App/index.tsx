@@ -1,8 +1,6 @@
-import React, { Suspense, useState } from "react";
+import React, {lazy, Suspense, useState} from "react";
 import { deviceTypeList, sortTypeList } from "types";
 import {
-   Button,
-   DeleteModal,
    DeviceRow,
    DropdownInput,
    FormInput,
@@ -22,7 +20,7 @@ import { MultiValue } from "react-select";
 import { Device } from "types/models/deviceType";
 import { useFormik } from "formik";
 import { capitalizeFirstLetter, formValidator } from "libs";
-import {Option} from "../../types/interfaces/devicesClient";
+import {Option} from "types/interfaces/devicesClient";
 
 interface FormType {
    id: string;
@@ -34,18 +32,21 @@ interface FormType {
    };
 }
 
-const formInitialState: FormType = {
-   id: "",
-   hdd_capacity: "",
-   system_name: "",
-   type: {
-      value: "",
-      label: "",
-   },
-};
-
 const App: React.FC = () => {
+   const Button = lazy(() => import("components/shared/button"));
+   const DeleteModal = lazy(() => import("components/modals/deleteModal"));
+
    const { devices, loading, reload, filter, setFilter, submitDelete, submitUpdateOrCreate, getById } = useDeviceClient();
+
+   const formInitialState: FormType = {
+      id: "",
+      hdd_capacity: "",
+      system_name: "",
+      type: {
+         value: "",
+         label: "",
+      },
+   };
 
    const formik = useFormik({
       initialValues: formInitialState,
@@ -67,7 +68,7 @@ const App: React.FC = () => {
       formik.setValues(formInitialState, false);
    };
 
-   const setFormState = (device: Device) => {
+   const setFormStateWithCurrentDevice = (device: Device) => {
       formik.setValues(
          {
             hdd_capacity: device.hdd_capacity,
@@ -85,7 +86,7 @@ const App: React.FC = () => {
    const handleOnOpenFormModal = async (deviceId?: string) => {
       if (deviceId) {
          const data = await getById(deviceId);
-         if (data) setFormState(data);
+         if (data) setFormStateWithCurrentDevice(data);
       }
       setIsFormModalOpen(true);
    };
@@ -109,7 +110,7 @@ const App: React.FC = () => {
       }
    };
 
-   const handleMultiData = (e: MultiValue<{ value: string; label: string }>) => {
+   const handleMultiDataDropDown = (e: MultiValue<{ value: string; label: string }>) => {
       if (e.some((x) => x.label === "All")) {
          setFilter((prev) => ({
             ...prev,
@@ -128,7 +129,7 @@ const App: React.FC = () => {
       }));
    };
 
-   const handleSingleData = (e: unknown, meta: any) => {
+   const handleSingleDataDropDown = (e: unknown, meta: any) => {
       console.log(e);
       console.log(meta);
 
@@ -176,7 +177,7 @@ const App: React.FC = () => {
                      options={deviceTypeList}
                      isMulti={true}
                      placeholder=""
-                     onChange={(e: any) => handleMultiData(e)}
+                     onChange={(e: any) => handleMultiDataDropDown(e)}
                   />
                   <DropdownInput
                      hideSelectedOptions
@@ -185,7 +186,7 @@ const App: React.FC = () => {
                      className="b_gray rounded f_normal h4 black100 dropdown_input_sorttype"
                      value={filter.sortBy}
                      options={sortTypeList}
-                     onChange={handleSingleData}
+                     onChange={handleSingleDataDropDown}
                   />
                </>
             }
