@@ -34,9 +34,10 @@ const ActionDropdown: React.FC<Props> = ({ options, id }) => {
             iconsize="0.875rem"
             iconName="Ellipsisis"
             onClick={() => setShowDropdown((prev) => !prev)}
+            data-testid="icon-button"
          />
          {showDropdown && (
-            <div className="action-dropdown semi_rounded b_darkopaque drop_shadow bg_white">
+            <div className="action-dropdown semi_rounded b_darkopaque drop_shadow bg_white" data-testid="action-dropdown">
                <ul id="action_box">
                   {options.map((option, index) => (
                      <ActionDropDownItem key={`${id}-${index}`} label={option.label} onClick={option.onClick} color={option.color} />

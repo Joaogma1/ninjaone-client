@@ -17,7 +17,7 @@ const DeviceRow: React.FC<Props> = ({ item, onDelete, onEdit }) => {
    const getType = () => OperatingSystem[item.type.toUpperCase() as keyof typeof OperatingSystem] as "Linux" | "Mac" | "Windows";
 
    return (
-      <tr className="row b_bottom_grey table_row_wrapper">
+      <tr className="row b_bottom_grey table_row_wrapper" data-testid="device-row">
          <td className="deviceinfo_wrapper">
             <div className="deviceinfo_top_section row center start">
                <Icon name={getType()} size="1rem" color="var(--black75)" />

@@ -4,11 +4,12 @@ import { Icon } from "components";
 
 export interface FormDropdownProps extends Props{
    fixedlabel?: string;
+   "data-testid"?:string;
 }
 
-const DropdownInput: React.FC<FormDropdownProps> = ({ fixedlabel, ...rest }) => {
+const DropdownInput: React.FC<FormDropdownProps> = ({ fixedlabel , ...rest }) => {
    return (
-      <div>
+      <div data-testid="dropdown">
          <Select
             {...rest}
             components={{
@@ -18,6 +19,7 @@ const DropdownInput: React.FC<FormDropdownProps> = ({ fixedlabel, ...rest }) => 
                MultiValueRemove: () => null,
                ValueContainer: (props) => <ValueContainer {...props} fixedLabel={fixedlabel} />,
             }}
+            data-testid="form_dropdown"
             styles={{
                menu: (base) => ({ ...base, fontSize: "0.875rem" }),
                control: (base) => ({

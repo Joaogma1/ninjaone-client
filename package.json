@@ -52,6 +52,7 @@
       "@types/react-redux": "^7.1.25",
       "@types/shortid": "^0.0.29",
       "babel-plugin-root-import": "^6.6.0",
+      "react-select-event": "^5.5.1",
       "shortid": "^2.2.16"
    }
 }

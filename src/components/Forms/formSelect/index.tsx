@@ -11,7 +11,7 @@ interface FormSelectProps {
 }
 
 const FormSelect: React.FC<Props & FormSelectProps & FormDropdownProps> = ({ hasError, labelName, errorMessage, isMandatory, name, ...rest }) => {
-   return <FormDropdown className={`${hasError ? "b_danger" : "b_gray"}`} id={name} {...rest} />;
+   return <FormDropdown data-testid="form_dropdown" className={`${hasError ? "b_danger" : "b_gray"}`} id={name} {...rest} />;
 };
 
 export default withFormField(FormSelect);
