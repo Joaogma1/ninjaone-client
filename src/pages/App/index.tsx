@@ -22,6 +22,9 @@ import { useFormik } from "formik";
 import { capitalizeFirstLetter, formValidator } from "libs";
 import {Option} from "types/interfaces/devicesClient";
 
+const Button = lazy(() => import("components/shared/button"));
+const DeleteModal = lazy(() => import("components/modals/deleteModal"));
+
 interface FormType {
    id: string;
    hdd_capacity: string;
@@ -33,8 +36,7 @@ interface FormType {
 }
 
 const App: React.FC = () => {
-   const Button = lazy(() => import("components/shared/button"));
-   const DeleteModal = lazy(() => import("components/modals/deleteModal"));
+
 
    const { devices, loading, reload, filter, setFilter, submitDelete, submitUpdateOrCreate, getById } = useDeviceClient();
 
@@ -130,8 +132,6 @@ const App: React.FC = () => {
    };
 
    const handleSingleDataDropDown = (e: unknown, meta: any) => {
-      console.log(e);
-      console.log(meta);
 
       const data = e as { label: string; value: string };
       setFilter((prev) => ({
