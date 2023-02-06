@@ -1,6 +1,6 @@
 # ninjaone-client
 
-This project is an code assestment test for Front-end Developers
+This project is a code assessment test for Front-end Developers
 
 ## Running locally
 
@@ -44,13 +44,13 @@ Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 Launches the test runner in the interactive watch mode.
 
-### `Running tests`
+### `Running tests Coverage`
 
 ```bash
   npm run coverage
 ```
 
-Launches the test runner that give informations about tests and the converage it has as output a folder named coverage that contains Covarage Data about the App
+Launches the test runner that give information about tests and the coverage it has as output a folder named coverage that contains coverage Data about the App
 
 ## Folder Structure
 
@@ -65,6 +65,9 @@ Launches the test runner that give informations about tests and the converage it
     |-- libs/
     |-- pages/
     |-- redux/
+        |-- actions/
+        |-- reducers/
+        |-- store/
     |-- tests/
     |-- types/
         |-- enums/
@@ -112,11 +115,17 @@ Launches the test runner that give informations about tests and the converage it
 
 ## Libraries
 
-> [axios](https://axios-http.com/docs/intro) > [yup](https://github.com/jquense/yup) >[formik](https://formik.org/docs/overview) > [react-select](https://react-select.com/home) > [redux](https://react-redux.js.org/)
+- [axios](https://axios-http.com/docs/intro) //http Client
+- [yup](https://github.com/jquense/yup) // Validation library
+- [formik](https://formik.org/docs/overview) // form library
+- [react-select](https://react-select.com/home) // dropdown/Select library
+- [redux](https://react-redux.js.org/) // State Management
+- [@testing-library](https://testing-library.com/docs/) // Tests 
+- [Jest](https://jestjs.io/) // Tests
 
 ## Stack
 
-**Front-end:** React, Redux
+**Front-end:** React, Redux, Typescrpt
 
 ## Author
 
